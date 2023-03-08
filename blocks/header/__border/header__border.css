@@ -1,0 +1,11 @@
+.header__border {
+  border-bottom: 1px solid #545454;
+  max-width: 880px;
+  margin: 0 calc(100vw/6.4);
+}
+
+@media screen and (max-width: 500px) {
+  .header__border {
+    margin: 0;
+  }
+}
