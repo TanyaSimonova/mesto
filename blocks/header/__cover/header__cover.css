@@ -1,0 +1,17 @@
+.header__cover {
+  width: 880px;
+  margin: 0 auto;
+  border-bottom: 1px solid #545454;
+}
+
+@media screen and (max-width: 900px) {
+  .header__cover {
+    max-width: calc(100vw/1.45);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__cover {
+    max-width: 100%;
+  }
+}
