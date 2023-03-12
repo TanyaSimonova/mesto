@@ -8,5 +8,5 @@
 * CSS функции calc(), minmax();
 * JS variables, function;
 Проект оформлен согласно файловой структуре [БЭМ Nested](https://ru.bem.info/methodology/).\
-Вы можете посмотреть что получилось
+Вы можете посмотреть что получилось https://tanyasimonova.github.io/mesto/
 
