@@ -272,6 +272,10 @@
   display: none;
 }
 
+.popup-opened {
+  display: block;
+}
+
 .popup-form {
   position: fixed;
   background: #ffffff;
@@ -314,6 +318,9 @@
   box-shadow: none;
   background-color: transparent;
   font-family: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #000000;
   font-weight: 400;
   font-size: 14px;
