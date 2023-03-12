@@ -14,7 +14,7 @@
   font-size: 14px;
   line-height: 1.2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-top: 54px;
+  padding-top: 58px;
   outline: none;
   width: 358px;
 }
@@ -22,10 +22,10 @@
 @media screen and (max-width: 900px) {
   .popup-form__input {
     width: 238px;
-    padding-top: 75px;
+    padding-top: 82px;
   }
 }
 
 .popup-form__input:nth-of-type(2) {
-  padding-top: 30px;
+  padding-top: 40px;
 }
