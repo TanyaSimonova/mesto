@@ -1,0 +1,15 @@
+.profile__speciality {
+  grid-area: subtitle;
+  margin: 0;
+  font-weight: 400;
+  font-size: calc(14px + 4*(100vw - 320px)/(1280 - 320));
+  line-height: 1.37;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile__speciality {
+    text-align: center;
+    padding: 14px 0 36px;
+  }
+}

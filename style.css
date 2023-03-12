@@ -178,7 +178,6 @@
 .elements {
   max-width: 1280px;
   margin: 0 auto;
-
 }
 
 .element-list {
@@ -272,7 +271,7 @@
   display: none;
 }
 
-.popup-opened {
+.popup__opened {
   display: block;
 }
 
@@ -369,7 +368,6 @@
   opacity: 80%;
   cursor: pointer;
 }
-
 
 @media screen and (max-width: 900px){
   .submit-button {

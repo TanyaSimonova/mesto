@@ -10,13 +10,13 @@ const submitButtonElement = popupContainerElement.querySelector('.submit-button'
 const closeButtonElement = popupContainerElement.querySelector('.close-button');
 
 function openPopup() {
-  popupForm.classList.add('popup-opened');
+  popupForm.classList.add('popup__opened');
 }
 
 editButtonElement.addEventListener('click', openPopup);
 
 function closePopup() {
-  popupForm.classList.remove('popup-opened');
+  popupForm.classList.remove('popup__opened');
 }
 
 closeButtonElement.addEventListener('click', closePopup);
