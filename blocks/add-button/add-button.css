@@ -1,8 +1,7 @@
 .add-button {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
-  border: 0;
+  appearance: none;
   border-radius: 2px;
   padding: 0;
   background: #000000;
