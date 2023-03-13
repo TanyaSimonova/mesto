@@ -18,11 +18,11 @@
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <p class="profile__speciality">Исследователь океана</p>
-          <button class="edit-button" type="button">
+          <button class="edit-button" type="button" aria-label="редактировать профиль">
           <span class="edit-button__icon"></span>
           </button>
         </div>
-        <button class="add-button" type="button">
+        <button class="add-button" type="button" aria-label="добавить карточку">
           <span class="add-button__icon"></span>
         </button>
       </section>
@@ -70,9 +70,9 @@
           <h2 class="popup-form__title">Редактировать профиль</h2>
           <input class="popup-form__input popup-form__input_type_name" type="text" placeholder="Введите ваше имя"  id="name" name="profileName" required>
           <input class="popup-form__input popup-form__input_type_speciality" type="text" placeholder="Укажите вашу профессию" id="speciality" name="profileSpeciality" required>
-          <button class="submit-button" type="submit" form="popupFormProfile">Coxpaнить</button>
+          <button class="submit-button" type="submit" form="popupFormProfile" aria-label="сохранить">Coxpaнить</button>
         </form>
-        <button class="close-button" type="button" form="popupFormProfile"></button>
+        <button class="close-button" type="button" form="popupFormProfile" aria-label="закрыть"></button>
       </div>
     </div>
     <script src="./scripts/script.js"></script>
