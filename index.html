@@ -7,17 +7,6 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="root">
-  <div class="popup">
-    <div class="popup-form">
-      <form action="" class="popup-form__container">
-        <h2 class="popup-form__title">Редактировать профиль</h2>
-        <input class="popup-form__input popup-form__input_name" type="text" placeholder="Введите ваше имя" value="Жак-Ив Кусто" id="name" required>
-        <input class="popup-form__input popup-form__input_speciality" type="text" placeholder="Укажите вашу профессию" value="Исследователь океана" id="speciality" required>
-        <button class="submit-button" type="button">Coxpaнить</button>
-        <button class="close-button" type="button"></button>
-      </form>
-    </div>
-  </div>
     <header class="header">
       <div class="header__cover">
         <div class="header__logo"></div>
@@ -75,6 +64,17 @@
     <footer class="footer">
       <p class="footer__author">2020 Mesto Russia</p>
     </footer>
-    <script src="./script.js"></script>
+    <div class="popup">
+      <div class="popup-form">
+        <form action="#" class="popup-form__container" method="post" name="popupForm" id="popupFormProfile">
+          <h2 class="popup-form__title">Редактировать профиль</h2>
+          <input class="popup-form__input popup-form__input_type_name" type="text" placeholder="Введите ваше имя"  id="name" name="profileName" required>
+          <input class="popup-form__input popup-form__input_type_speciality" type="text" placeholder="Укажите вашу профессию" id="speciality" name="profileSpeciality" required>
+          <button class="submit-button" type="submit" form="popupFormProfile">Coxpaнить</button>
+        </form>
+        <button class="close-button" type="button" form="popupFormProfile"></button>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
