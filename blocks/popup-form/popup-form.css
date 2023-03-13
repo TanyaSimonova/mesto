@@ -1,17 +1,12 @@
 .popup-form {
-  position: fixed;
+  position: relative;
   background: #ffffff;
   width: 430px;
-  height: 330px;
   border-radius: 10px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 900px) {
   .popup-form {
     width: 282px;
-    height: 322px;
   }
 }

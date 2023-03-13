@@ -1,5 +1,5 @@
 .close-button {
-  position: fixed;
+  position: absolute;
   top: -40px;
   right: -40px;
   padding: 0;
@@ -7,7 +7,7 @@
   border: none;
   border-radius: 0;
   box-shadow: none;
-  background-color: inherit;
+  background-color: initial;
   font-family: inherit;
   color: inherit;
   background-image: url('../../images/CloseIcon.svg');
@@ -19,7 +19,7 @@
 }
 
 .close-button:hover {
-  opacity: 80%;
+  opacity: .6;
   cursor: pointer;
 }
 
@@ -27,7 +27,7 @@
   .close-button {
     width: 20px;
     height: 20px;
-    top: -37px;
+    top: -40px;
     right: 0;
     font-weight: normal;
   }

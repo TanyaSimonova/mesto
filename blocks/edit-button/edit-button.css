@@ -12,7 +12,7 @@
 }
 
 .edit-button:hover {
-  opacity: 80%;
+  opacity: .6;
   cursor: pointer;
 }
 
