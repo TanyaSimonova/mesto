@@ -42,7 +42,7 @@
       <p class="footer__author">2020 Mesto Russia</p>
     </footer>
     <div class="popup">
-      <div class="popup-form">
+      <div class="popup-form popup-form__profile">
         <form action="#" class="popup-form__container" method="post" name="popupForm" id="popupFormProfile">
           <h2 class="popup-form__title">Редактировать профиль</h2>
           <input class="popup-form__input popup-form__input_type_name" type="text" placeholder="Введите ваше имя"  id="name" name="profileName" required>
@@ -50,6 +50,17 @@
           <button class="submit-button" type="submit" form="popupFormProfile" aria-label="сохранить">Coxpaнить</button>
         </form>
         <button class="close-button" type="button" form="popupFormProfile" aria-label="закрыть"></button>
+      </div>
+    </div>
+    <div class="popup">
+      <div class="popup-form popup-form__elements">
+        <form action="#" class="popup-form__container popup-form__container_added" method="post" name="popupForm" id="popupFormElement">
+          <h2 class="popup-form__title">Новое место</h2>
+          <input class="popup-form__input popup-form__input_type_place" type="text" placeholder="Название"  id="place" name="placeName" required>
+          <input class="popup-form__input popup-form__input_type_link" type="text" placeholder="Ссылка на картинку" id="link" name="placeLink" required>
+          <button class="submit-button" type="submit" form="popupFormElement" aria-label="создать">Создать</button>
+        </form>
+        <button class="close-button" type="button" form="popupFormElement" aria-label="закрыть"></button>
       </div>
     </div>
     <script src="./scripts/script.js"></script>
