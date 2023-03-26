@@ -1,8 +1,8 @@
 .element-list__image {
   grid-area: image;
   grid-column: span 2;
-  max-width: 282px;
-  max-height: 282px;
+  width: 282px;
+  height: 282px;
   object-fit: cover;
   width: 100%;
   -webkit-box-sizing: border-box;
