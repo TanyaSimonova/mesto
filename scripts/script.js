@@ -12,8 +12,8 @@ const addButtonElement = document.querySelector('.add-button');
 const popupContainerPlace = document.querySelector('.popup-form__container_added');
 const placeInput = popupContainerPlace.querySelector('.popup-form__input_type_place');
 const linkInput = popupContainerPlace.querySelector('.popup-form__input_type_link');
-const popupImageSubtitle = document.querySelector('.popup-form__subtitle');
-const popupImageElement = document.querySelector('.popup-form__image');
+const popupImageSubtitle = document.querySelector('.popup-focus__subtitle');
+const popupImageElement = document.querySelector('.popup-focus__image');
 
 function openPopup(index) {
   popupForm[index].classList.add('popup_active');
