@@ -17,11 +17,11 @@ const popupImageElement = document.querySelector('.popup-focus__image');
 const profilePopup = document.querySelector('.profile-popup');
 const cardPopup = document.querySelector('.card-popup');
 const imagePopup = document.querySelector('.image-popup');
+const submitButtonPlace = popupContainerPlace.querySelector('.submit-button');
 
 function openPopup(popups) {
   popups.classList.add('popup_active');
   document.addEventListener('keydown', checkAndCloseByEsc);
-  //document.addEventListener('click', checkAndCloseByOverlay);
 }
 
 function openPopupProfile() {
@@ -30,14 +30,9 @@ function openPopupProfile() {
   openPopup(profilePopup);
 }
 
-editButtonElement.addEventListener('click', ()=> openPopupProfile());
-
-addButtonElement.addEventListener('click', ()=> openPopup(cardPopup));
-
 function closePopup(popups) {
   popups.classList.remove('popup_active');
   document.removeEventListener('keydown', checkAndCloseByEsc);
-  //document.addEventListener('click', checkAndCloseByOverlay);
 }
 
 // закрытие попап через ESC
@@ -49,20 +44,12 @@ function checkAndCloseByEsc (event)  {
   }
 }
 
-//закрытие всех попапов крестиком
-closeButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
-
 //закрытие попапов по оверлею
 function checkAndCloseByOverlay (evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(evt.currentTarget);
   }
 }
-
-popups.forEach(popup => popup.addEventListener('click', checkAndCloseByOverlay));
 
 //редактировать профиль
 function handleProfileFormSubmit (evt) {
@@ -71,35 +58,6 @@ function handleProfileFormSubmit (evt) {
   profileJob.textContent = jobInput.value;
   closePopup(profilePopup);
 }
-
-popupContainerElement.addEventListener('submit', handleProfileFormSubmit);
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 function addCard(item) {
   const copyElementList = itemTemplate.cloneNode(true);
@@ -142,3 +100,21 @@ popupContainerPlace.addEventListener('submit', (evt) => {
   elementList.prepend(addCard(elementInput));
   closePopup(cardPopup);
 });
+
+//открытие попапа добавления карточек
+addButtonElement.addEventListener('click', ()=> {
+  submitButtonPlace.classList.add('submit-button_disabled');
+  openPopup(cardPopup)
+  });
+
+//закрытие всех попапов крестиком
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
+});
+
+editButtonElement.addEventListener('click', ()=> openPopupProfile());
+
+popups.forEach(popup => popup.addEventListener('click', checkAndCloseByOverlay));
+
+popupContainerElement.addEventListener('submit', handleProfileFormSubmit);
