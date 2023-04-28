@@ -28,7 +28,7 @@
       </section>
       <section class="elements">
         <ul class="element-list">
-          <template class="element-list__template">
+          <template class="element-list__template" id="elementListTemplate">
             <li class="element-list__item">
               <img class="element-list__image" src="#" alt="">
               <h2 class="element-list__title"></h2>
@@ -44,7 +44,7 @@
     </footer>
     <div class="popup profile-popup">
       <div class="popup-form">
-        <form action="#" class="popup-form__container" method="post" name="popupForm" id="popupFormProfile" novalidate>
+        <form action="#" class="popup-form__container" method="post" name="popupFormProfile" id="popupFormProfile" novalidate>
           <h2 class="popup-form__title">Редактировать профиль</h2>
           <input class="popup-form__input popup-form__input_type_name" type="text" placeholder="Имя"  id="name" name="name" required minlength="2" maxlength="40">
           <span class="popup-form__error popup-form__error_name"></span>
@@ -57,7 +57,7 @@
     </div>
     <div class="popup card-popup">
       <div class="popup-form">
-        <form action="#" class="popup-form__container popup-form__container_added" method="post" name="popupForm" id="popupFormElement" novalidate>
+        <form action="#" class="popup-form__container popup-form__container_added" method="post" name="popupFormCard" id="popupFormElement" novalidate>
           <h2 class="popup-form__title">Новое место</h2>
           <input class="popup-form__input popup-form__input_type_place" type="text" placeholder="Название"  id="place" name="place" required minlength="2" maxlength="30">
           <span class="popup-form__error popup-form__error_place"></span>
@@ -75,8 +75,6 @@
         <button class="close-button" type="button" form="popupFormElement" aria-label="закрыть"></button>
       </div>
     </div>
-    <script src="./scripts/constants.js"></script>
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>
