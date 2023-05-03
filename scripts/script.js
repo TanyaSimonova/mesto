@@ -27,7 +27,7 @@ const submitButtonPlace = popupContainerPlace.querySelector('.submit-button');
 const selectorTemplateCard = '#elementListTemplate';
 
 const formValidateCard = document.forms.popupFormCard;
-
+const formValidateProfile = document.forms.popupFormProfile;
 
 function openPopup(popups) {
   popups.classList.add('popup_active');
@@ -193,5 +193,7 @@ class FormValidator {
 };
 
 const formValidationCard = new FormValidator(validationConfig, formValidateCard);
-console.log(formValidationCard);
 formValidationCard.enableValidation();
+
+const formValidationProfile = new FormValidator(validationConfig, formValidateProfile);
+formValidationProfile.enableValidation();
