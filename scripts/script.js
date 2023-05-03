@@ -117,13 +117,12 @@ popupContainerElement.addEventListener('submit', handleProfileFormSubmit);
 
 
 const validationConfig = {
-  //formSelector: '.popup-form__container',
   inputSelector: '.popup-form__input',
   submitButtonSelector: '.submit-button',
   inactiveButtonClass: 'submit-button_disabled',
-  inputErrorClass: 'popup__input_type_error',
+  inputErrorClass: 'popup-form__input_type_error',
   errorClass: 'popup-form__error_visible',
-  errorSpan: 'popup-form__error_'
+  errorSpan: '.popup-form__error_'
 };
 
 class FormValidator {
@@ -138,14 +137,12 @@ class FormValidator {
   }
 
  _showInputError (errorInput, input) {
-    //this._errorInput = this._form.querySelector(`${this._errorSpan}${this._input.id}`);
     input.classList.add(this._inputErrorClass);
-    errorInput.textContent = input.errorMessage;
+    errorInput.textContent = input.validationMessage;
     errorInput.classList.add(this._errorClass);
   };
 
   _hideInputError (errorInput, input) {
-    //this._errorInput = this._form.querySelector(`${this._errorSpan}${this._input.id}`);
     input.classList.remove(this._inputErrorClass);
     errorInput.textContent ='';
     errorInput.classList.remove(this._errorClass);
@@ -160,73 +157,8 @@ class FormValidator {
     }
   };
 
-  //_hasInvalidInput () {
- //   return this._inputList.some(item =>!item.validity.valid)
- // };
-
-  //_disableButton () {
-  //  this._formButton.classList.add(this._inactiveButtonClass);
-  //  this._formButton.disabled = true;
-  //}
-
-  //_enableButton () {
- //   this._formButton.classList.remove(this._inactiveButtonClass);
- //   this._formButton.disabled = false;
- // }
-
-  _setEventListeners () {
-    this._inputList.forEach(input => {
-      input.addEventListener('input', () => {
-        this._checkInputValidity(input);
-       // if (this._hasInvalidInput(this._inputList)) {
-       //   this._disableButton()
-       // } else {
-       //   this._enableButton()
-       // }
-
-      } )
-    })
-
-  }
-
-  enableValidation () {
-    this._formButton = this._form.querySelector(this._submitButtonSelector);
-    this._inputList = this._form.querySelectorAll(this._inputSelector);
-    this._setEventListeners();
-
-  }
-
-
-};
-
-const formValidationCard = new FormValidator(validationConfig, formValidateCard);
-console.log(formValidationCard);
-formValidationCard.enableValidation();
-
-/* _showInputError () {
-    this._errorInput = this._form.querySelector(`.popup-form__error_${this._inputSelector.id}`);
-    this._inputSelector.classList.add(this._inputErrorClass);
-    errorInput.textContent = errorMessage;
-    errorInput.classList.add(this._errorClass);
-  };
-
-  _hideInputError () {
-    this._errorInput = this._form.querySelector(`.popup-form__error_${this._inputSelector.id}`);
-    this._inputSelector.classList.remove(this._inputErrorClass);
-    errorInput.classList.remove(this._errorClass);
-    errorInput.textContent = '';
-  };
-
-  _checkInputValidity () {
-    if (!input.validity.valid) {
-      this._showInputError();
-    } else {
-      this._hideInputError();
-    }
-  };
-
   _hasInvalidInput () {
-    return this._inputList.some(item =>!item.validity.valid)
+    return Array.from(this._inputList).some(input =>!input.validity.valid)
   };
 
   _disableButton () {
@@ -240,10 +172,6 @@ formValidationCard.enableValidation();
   }
 
   _setEventListeners () {
-    this._inputList = this._form.querySelectorAll(this._inputSelector),
-    this._formButton = this._form.querySelector(this._submitButtonSelector);
-    this._disableButton()
-
     this._inputList.forEach(input => {
       input.addEventListener('input', () => {
         this._checkInputValidity(input);
@@ -257,6 +185,13 @@ formValidationCard.enableValidation();
   }
 
   enableValidation () {
-    //this._inputList = this._form.querySelectorAll(this._inputSelector)
+    this._formButton = this._form.querySelector(this._submitButtonSelector);
+    this._inputList = this._form.querySelectorAll(this._inputSelector);
     this._setEventListeners();
-  }*/
+
+  }
+};
+
+const formValidationCard = new FormValidator(validationConfig, formValidateCard);
+console.log(formValidationCard);
+formValidationCard.enableValidation();
