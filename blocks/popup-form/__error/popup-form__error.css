@@ -5,7 +5,9 @@
   line-height: 1.25;
   padding-top: 5px;
   width: 358px;
-  display: none;
+  display: block;
+  visibility: hidden;
+  min-height: 30px;
 }
 
 @media screen and (max-width: 900px) {
