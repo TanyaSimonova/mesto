@@ -1,5 +1,5 @@
 import initialCards  from './constants.js';
-import Card from './Cards.js';
+import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
 const editButtonElement = document.querySelector('.edit-button');
