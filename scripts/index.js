@@ -1,4 +1,5 @@
 import initialCards  from './constants.js';
+import {validationConfig} from './constants.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
@@ -24,17 +25,8 @@ const submitButtonPlace = popupContainerPlace.querySelector('.submit-button');
 const formValidateCard = document.forms.popupFormCard;
 const formValidateProfile = document.forms.popupFormProfile;
 
-const validationConfig = {
-  inputSelector: '.popup-form__input',
-  submitButtonSelector: '.submit-button',
-  inactiveButtonClass: 'submit-button_disabled',
-  inputErrorClass: 'popup-form__input_type_error',
-  errorClass: 'popup-form__error_visible',
-  errorSpan: '.popup-form__error_'
-};
-
-function openPopup(popups) {
-  popups.classList.add('popup_active');
+function openPopup(popup) {
+  popup.classList.add('popup_active');
   document.addEventListener('keydown', checkAndCloseByEsc);
 }
 
@@ -52,9 +44,8 @@ function openPopupImage(data) {
   openPopup(imagePopup);
 }
 
-
-function closePopup(popups) {
-  popups.classList.remove('popup_active');
+function closePopup(popup) {
+  popup.classList.remove('popup_active');
   document.removeEventListener('keydown', checkAndCloseByEsc);
 }
 
@@ -82,27 +73,31 @@ function handleProfileFormSubmit (evt) {
   closePopup(profilePopup);
 }
 
+function createCard (item) {
+  const card = new Card(item, '.element-list__template', openPopupImage);
+  const cardElement = card.generateCard()
+
+  return cardElement
+}
+
 //перебор массива с карточками
 initialCards.forEach((item) => {
-  const card = new Card(item, '.element-list__template', openPopupImage);
-  const cardElement = card.generateCard();
-  elementList.prepend(cardElement);
+  elementList.prepend(createCard(item));
 });
 
 //добавление карточки через форму
 popupContainerPlace.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const elementInput = {name: placeInput.value, link: linkInput.value};
-  const card = new Card(elementInput, '.element-list__template', openPopupImage);
+  elementList.prepend(createCard(elementInput));
   evt.target.reset();
-  elementList.prepend(card.generateCard());
   closePopup(cardPopup);
 });
 
 //открытие попапа добавления карточек
 addButtonElement.addEventListener('click', ()=> {
-  submitButtonPlace.classList.add('submit-button_disabled');
-  openPopup(cardPopup)
+  openPopup(cardPopup);
+  formValidationCard.disableButton();
   });
 
 //закрытие всех попапов крестиком
