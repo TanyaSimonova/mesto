@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Место</title>
-  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="root">
     <header class="header">
@@ -14,7 +13,7 @@
     </header>
     <main class="main">
       <section class="profile">
-        <img class="profile__avatar" src="./images/Kusto.jpg" alt="ваша фотография">
+        <img class="profile__avatar" src="<%=require('./images/kusto.jpg')%>" alt="ваша фотография">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <p class="profile__speciality">Исследователь океана</p>
@@ -75,6 +74,5 @@
         <button class="close-button" type="button" form="popupFormElement" aria-label="закрыть"></button>
       </div>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

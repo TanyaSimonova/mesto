@@ -18,6 +18,7 @@ import {
   profilePopupSelector,
   cardPopupSelector
  } from './constants.js';
+ import '../pages/index.css'
 
 const profileUserInfo = new UserInfo(profileNameSelector, profileJobSelector);
 
