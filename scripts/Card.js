@@ -36,11 +36,11 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
 
-    this._element.querySelector('.element-list__title').textContent = this._data.name;
+    this._element.querySelector('.element-list__title').textContent = this._data.place;
     this._listImage = this._element.querySelector('.element-list__image');
     this._likeButton = this._element.querySelector('.element-list__icon');
     this._deleteButton = this._element.querySelector('.element-list__delete');
-    this._listImage.alt = this._data.name;
+    this._listImage.alt = this._data.place;
     this._listImage.src = this._data.link;
 
     this._setEventListener();
