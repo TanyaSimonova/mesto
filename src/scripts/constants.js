@@ -44,6 +44,7 @@ const profileNameSelector = '.profile__name';
 const profileJobSelector = '.profile__speciality';
 const profilePopupSelector = '.profile-popup';
 const cardPopupSelector = '.card-popup';
+const templateSelector = '.element-list__template';
 
 export {
   initialCards,
@@ -57,5 +58,6 @@ export {
   profileNameSelector,
   profileJobSelector,
   profilePopupSelector,
-  cardPopupSelector
+  cardPopupSelector,
+  templateSelector
  };

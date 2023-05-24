@@ -16,16 +16,15 @@ import {
   profileNameSelector,
   profileJobSelector,
   profilePopupSelector,
-  cardPopupSelector
+  cardPopupSelector,
+  templateSelector
  } from './constants.js';
  import '../pages/index.css'
 
 const profileUserInfo = new UserInfo(profileNameSelector, profileJobSelector);
 
-const popupWithProfile = new PopupWithForm(profilePopupSelector, (evt) => {
-  evt.preventDefault();
-  profileUserInfo.setUserInfo(popupWithProfile._getInputValues());
-  popupWithProfile.close();
+const popupWithProfile = new PopupWithForm(profilePopupSelector, (data) => {
+  profileUserInfo.setUserInfo(data);
 })
 popupWithProfile.setEventListeners();
 
@@ -35,16 +34,20 @@ popupImage.setEventListeners();
 const section = new Section({
   items: initialCards,
   renderer: (item) => {
-    const card = new Card(item, '.element-list__template', popupImage.open);
-    return card.generateCard();
-  }
+    section.addItem(createCard(item));
+  },
 }, elementListSelector);
+
 section.renderItems();
 
-const popupWithCard = new PopupWithForm(cardPopupSelector, (evt) => {
-  evt.preventDefault();
-  section.addItem(popupWithCard._getInputValues());
-  popupWithCard.close();
+function createCard(item) {
+  const card = new Card(item, templateSelector, popupImage.open);
+  return card.generateCard();
+};
+
+//добавление карточки
+const popupWithCard = new PopupWithForm(cardPopupSelector, (data) => {
+  section.addItem(createCard(data));
 })
 popupWithCard.setEventListeners();
 
