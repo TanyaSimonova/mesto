@@ -10,6 +10,7 @@
 @import url('../blocks/profile/__info/profile__info.css');
 @import url('../blocks/profile/__name/profile__name.css');
 @import url('../blocks/profile/__speciality/profile__speciality.css');
+@import url('../blocks/profile/__button/profile__button.css');
 @import url('../blocks/edit-button/edit-button.css');
 @import url('../blocks/edit-button/__icon/edit-button__icon.css');
 @import url('../blocks/add-button/add-button.css');
@@ -22,6 +23,7 @@
 @import url('../blocks/element-list/__icon/element-list__icon.css');
 @import url('../blocks/element-list/__icon/_active/element-list__icon_active.css');
 @import url('../blocks/element-list/__delete/element-list__delete.css');
+@import url('../blocks/element-list/__score/element-list__score.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__author/footer__author.css');
 @import url('../blocks/popup/popup.css');
@@ -35,6 +37,7 @@
 @import url('../blocks/popup-form/__error/_visible/popup-form__error_visible.css');
 @import url('../blocks/submit-button/submit-button.css');
 @import url('../blocks/submit-button/_disabled/submit-button_disabled.css');
+@import url('../blocks/submit-button/_delete/submit-button_delete.css');
 @import url('../blocks/close-button/close-button.css');
 @import url('../blocks/popup-focus/popup-focus.css');
 @import url('../blocks/popup-focus/__image/popup-focus__image.css');

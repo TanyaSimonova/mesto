@@ -1,29 +1,29 @@
-const initialCards = [
+/*const initialCards = [
   {
-    place: 'Архыз',
+    name: 'Архыз',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
   {
-    place: 'Челябинская область',
+    name: 'Челябинская область',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
   },
   {
-    place: 'Иваново',
+    name: 'Иваново',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
   },
   {
-    place: 'Камчатка',
+    name: 'Камчатка',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
   },
   {
-    place: 'Холмогорский район',
+    name: 'Холмогорский район',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
   },
   {
-    place: 'Байкал',
+    name: 'Байкал',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
-];
+];*/
 
 const validationConfig = {
   inputSelector: '.popup-form__input',
@@ -36,18 +36,25 @@ const validationConfig = {
 
 const editButtonElement = document.querySelector('.edit-button');
 const addButtonElement = document.querySelector('.add-button');
+const editProfileAvatar = document.querySelector('.profile__button');
 const formValidateCard = document.forms.popupFormCard;
 const formValidateProfile = document.forms.popupFormProfile;
+const formValidateAvatar = document.forms.popupFormAvatar;
+//const formDelete = document.forms.DeleteCard;
 const imagePopupSelector = '.image-popup';
 const elementListSelector = '.element-list';
 const profileNameSelector = '.profile__name';
 const profileJobSelector = '.profile__speciality';
 const profilePopupSelector = '.profile-popup';
+const avatarProfileSelector = '.avatar-popup';
 const cardPopupSelector = '.card-popup';
+const deletePopupSelector = '.delete-popup';
 const templateSelector = '.element-list__template';
+const imageProfileAvatarSelector = '.profile__avatar';
+
 
 export {
-  initialCards,
+  //initialCards,
   validationConfig,
   editButtonElement,
   addButtonElement,
@@ -59,5 +66,10 @@ export {
   profileJobSelector,
   profilePopupSelector,
   cardPopupSelector,
-  templateSelector
+  templateSelector,
+  formValidateAvatar,
+  avatarProfileSelector,
+  editProfileAvatar,
+  imageProfileAvatarSelector,
+  deletePopupSelector,
  };
