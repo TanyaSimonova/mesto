@@ -1,11 +1,11 @@
-import Card from './Card.js';
-import FormValidator from './FormValidator.js';
-import PopupWithImage from './PopupWithImage.js';
-import Section from './Section.js';
-import UserInfo from './UserInfo.js';
-import PopupWithForm from './PopupWithForm.js';
-import PopupDeleteCard from './PopupDeleteCard.js';
-import Api from './api.js';
+import Card from '../components/Card.js';
+import FormValidator from '../components/FormValidator.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import Section from '../components/Section.js';
+import UserInfo from '../components/UserInfo.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupDeleteCard from '../components/PopupDeleteCard.js';
+import Api from '../components/api.js';
 
 import {
   validationConfig,
@@ -25,10 +25,9 @@ import {
   editProfileAvatar,
   imageProfileAvatarSelector,
   deletePopupSelector,
-  //formDelete
- } from './constants.js';
+ } from '../utils/constants.js';
 
- import '../pages/index.css'
+ import './index.css';
 
 const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-66',
