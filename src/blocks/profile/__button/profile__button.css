@@ -22,10 +22,9 @@
   height: 100%;
   width: 100%;
   z-index: 1;
-  opacity: 0;
 }
 
-@media (hover :hover) {
+@media (hover:hover) {
   .profile__button:hover::before {
     cursor: pointer;
     transition: opasity .4s linear;
