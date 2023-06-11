@@ -1,30 +1,3 @@
-/*const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];*/
-
 const validationConfig = {
   inputSelector: '.popup-form__input',
   submitButtonSelector: '.submit-button',
@@ -40,7 +13,6 @@ const editProfileAvatar = document.querySelector('.profile__button');
 const formValidateCard = document.forms.popupFormCard;
 const formValidateProfile = document.forms.popupFormProfile;
 const formValidateAvatar = document.forms.popupFormAvatar;
-//const formDelete = document.forms.DeleteCard;
 const imagePopupSelector = '.image-popup';
 const elementListSelector = '.element-list';
 const profileNameSelector = '.profile__name';
@@ -54,7 +26,6 @@ const imageProfileAvatarSelector = '.profile__avatar';
 
 
 export {
-  //initialCards,
   validationConfig,
   editButtonElement,
   addButtonElement,
